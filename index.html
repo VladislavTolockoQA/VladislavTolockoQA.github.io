@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Владислав Толочко — QA-инженер</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="logo_multimedia_brand_social_media_gab_application_website_icon_210291.png" type="image/png" />
+</head>
+<body>
+  <div class="background"></div>
+  <div class="card">
+    <img src="photo_2025-03-02_01-24-42.jpg" alt="Фото Владислава" class="avatar">
+    <h1>Владислав Толочко</h1>
+    <p class="title">QA-инженер</p>
+    <p>QA-инженер с более чем 2 годами опыта в ручном тестировании веб-приложений и API. Нацелен на качество и ценность продукта.</p>
+    <div class="contacts">
+      <p><strong>Email:</strong> <a href="mailto:tolockovladislav12@gmail.com">tolockovladislav12@gmail.com</a></p>
+      <p><strong>Телефон:</strong> <a href="tel:+79093814974">+7 909 381 49 74</a></p>
+    </div>
+    <div class="social">
+      <a href="https://hh.ru/resume/b18dd507ff0eb28ff60039ed1f413779473061" target="_blank">HH.ru</a> |
+      <a href="https://github.com/VladislavTolockoQA" target="_blank">GitHub</a> |
+      <a href="https://t.me/l_PwP_l" target="_blank">Telegram</a>
+    </div>
+    <div class="button-block">
+      <a href="about.html" class="button">Подробнее обо мне</a>
+    </div>
+  </div>
+  <script>
+  // Анимация плавного перехода между страницами
+  document.querySelectorAll('a.button').forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      const href = this.getAttribute('href');
+      document.body.classList.add('fade-out');
+      setTimeout(() => {
+        window.location.href = href;
+      }, 400);
+    });
+  });
+</script>
+<script>
+  const bg = document.querySelector('.background');
+  document.addEventListener('mousemove', e => {
+    const x = e.clientX / window.innerWidth - 0.5;
+    const y = e.clientY / window.innerHeight - 0.5;
+    bg.style.transform = `translate(${x * 30}px, ${y * 30}px)`;
+  });
+</script>
+</body>
+</html>

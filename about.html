@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Обо мне — Владислав Толочко</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="logo_multimedia_brand_social_media_gab_application_website_icon_210291.png" type="image/png" />
+</head>
+<body>
+  <div class="background"></div>
+  <div class="card">
+    <h1>Обо мне</h1>
+    <p>
+      QA-инженер с 2+ годами коммерческого опыта тестирования веб-приложений и API, а также 1 годом работы в технической поддержке.
+    </p>
+    <p>
+      Опыт в поддержке помогает мне смотреть на продукт с позиции конечного пользователя, а в QA — выявлять уязвимости и точки улучшения на уровне бизнес-логики, UX и API.
+    </p>
+    <p>
+      Хорошо владею инструментами: Postman, DBeaver (PostgreSQL), Test IT, Jira, Confluence, Kibana, Grafana, DevTools.
+    </p>
+    <p>
+    Понимаю основы CI/CD, Git, Charles Proxy, Apache Kafka и Jaeger.
+    </p>
+    <p>
+      Ориентирован на результат, активно инициирую улучшения и оптимизацию процессов.
+    </p>
+    <div class="button-block">
+      <a href="index.html" class="button">Назад</a>
+    </div>
+  </div>
+
+  <script>
+    // Анимация плавного перехода между страницами
+    document.querySelectorAll('a.button').forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const href = this.getAttribute('href');
+        document.body.classList.add('fade-out');
+        setTimeout(() => {
+          window.location.href = href;
+        }, 400);
+      });
+    });
+
+    // Анимация движения фона
+    const bg = document.querySelector('.background');
+    document.addEventListener('mousemove', e => {
+      const x = e.clientX / window.innerWidth - 0.5;
+      const y = e.clientY / window.innerHeight - 0.5;
+      bg.style.transform = `translate(${x * 30}px, ${y * 30}px)`;
+    });
+  </script>
+</body>
+</html>
